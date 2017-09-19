@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Name:
+    {{request.session.name}}<br>
+    Location:
+    {{request.session.location}}<br>
+    Language:
+    {{request.session.langauge}}<br>
+    Comment:
+    {{request.session.comment}}<br>
+    You have submitted this form {{request.session.tries}} times!
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/process" method="post"> 
+        {% csrf_token %}
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        Name:
+        <input type='text' id='name' name="name">
+        Location:
+        <select name="location">
+                <option value="SanJose">San Jose</option>
+                <option value="Berkley">Berkley</option>
+                <option value="Seattle">Seattle</option>
+                <option value="Other">Other</option>
+              </select></h4>
+        Favorite Language:
+        <select name="language">
+                <option value="Python">Python</option>
+                <option value="JS">JavaScript</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Other">Other</option>
+        Leave us a comment(:
+        <input id= "comment" type="text" name="comment">
+        <input id="submit" type="submit" value="Submit">
+        </select>
+       
+    </form>
+    
+</body>
+</html>
